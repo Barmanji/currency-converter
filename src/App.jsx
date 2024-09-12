@@ -24,6 +24,7 @@ function App() {
     }
   }
 
+  const exchangeRate = currencyInfo[to] || 1;
   return (
     <div
       className="relative flex flex-col items-center justify-between min-h-screen bg-cover bg-no-repeat"
@@ -33,7 +34,7 @@ function App() {
     >
       <div className="w-full flex-grow flex items-center justify-center overflow-hidden">
         <div className="w-full max-w-xl mx-auto border border-gray-60 rounded-lg p-8 backdrop-blur-sm bg-white/30">
-          
+
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -53,7 +54,7 @@ function App() {
             <div className="relative w-full h-0.5">
               <button
                 type="button"
-                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-violet-600 text-white px-2 py-0.5"
                 onClick={swap}
               >
                 Swap
@@ -69,10 +70,14 @@ function App() {
                 amountDisable
               />
             </div>
-            <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
+            <button type="submit" className="w-full bg-violet-600 text-white px-4 py-3 rounded-lg">
               Convert {from.toUpperCase()} to {to.toUpperCase()}
             </button>
           </form>
+          {/* Display the exchange rate as a disclaimer */}
+          <div className="mt-4 text-center text-white font-bold">
+            <p>1 {from.toUpperCase()} = {exchangeRate} {to.toUpperCase()}</p>
+          </div>
         </div>
       </div>
 
