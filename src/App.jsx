@@ -29,7 +29,7 @@ function App() {
     <div
       className="relative flex flex-col items-center justify-between min-h-screen bg-cover bg-no-repeat"
       style={{
-        backgroundImage: `url('https://images.pexels.com/photos/28900151/pexels-photo-28900151/free-photo-of-historic-torun-cityscape-on-vistula-river.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`,
+        backgroundImage: `url('https://w.wallhaven.cc/full/md/wallhaven-mdpdrm.jpg')`,
       }}
     >
       <div className="w-full flex-grow flex items-center justify-center overflow-hidden">
